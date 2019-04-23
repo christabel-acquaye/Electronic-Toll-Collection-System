@@ -5,10 +5,21 @@ import { Card } from "../../components/Card";
 import LocationImage from "../../../assets/history.png";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import Header from "../../components/Header";
+import MapView, { PROVIDER_GOOGLE } from "react-native-maps";
 
 const HistoryItems = ({ mapImage, tollGate, amount, expiry_date }) => (
   <Card style={styles.weeklySection}>
-    <Image style={styles.image} source={mapImage} />
+    {/* <Image style={styles.image} source={mapImage} /> */}
+    <MapView
+      provider={PROVIDER_GOOGLE}
+      style={styles.image}
+      region={{
+        latitude: 37.78825,
+        longitude: -122.4324,
+        latitudeDelta: 0.015,
+        longitudeDelta: 0.0121
+      }}
+    />
     <View
       style={{
         flexDirection: "row",

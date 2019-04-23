@@ -57,6 +57,7 @@
 		809B911D95D94F8683FE2A71 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF0EF8A452364084A70A6D02 /* Octicons.ttf */; };
 		DE4F00832F924F75B50327AD /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A257BCF46B3B453AB28140E6 /* SimpleLineIcons.ttf */; };
 		0167D343E0D847E4A0B2E8C7 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DFABDDF6781C49B1A6B489E4 /* Zocial.ttf */; };
+		F7BF81A46BFF4A538F321A2B /* libAirMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 234DDDE786AD48B89D31AD18 /* libAirMaps.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -384,6 +385,8 @@
 		CF0EF8A452364084A70A6D02 /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		A257BCF46B3B453AB28140E6 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		DFABDDF6781C49B1A6B489E4 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D91668F5A9944BF4A63B3425 /* AirMaps.xcodeproj */ = {isa = PBXFileReference; name = "AirMaps.xcodeproj"; path = "../node_modules/react-native-maps/lib/ios/AirMaps.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		234DDDE786AD48B89D31AD18 /* libAirMaps.a */ = {isa = PBXFileReference; name = "libAirMaps.a"; path = "libAirMaps.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -414,6 +417,7 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				EC55C582C46C431AB5E7BA4D /* libRNGestureHandler.a in Frameworks */,
 				E0463393E97649398D265061 /* libRNVectorIcons.a in Frameworks */,
+				F7BF81A46BFF4A538F321A2B /* libAirMaps.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,6 +610,7 @@
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				C9FD7320D4F240FAAA0342DF /* RNGestureHandler.xcodeproj */,
 				ABA9B25805A840009408C789 /* RNVectorIcons.xcodeproj */,
+				D91668F5A9944BF4A63B3425 /* AirMaps.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1275,11 +1280,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
+					"$(SRCROOT)\..\node_modules\react-native-maps\lib\ios/**",
 				);
 			};
 			name = Debug;
@@ -1304,11 +1311,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
+					"$(SRCROOT)\..\node_modules\react-native-maps\lib\ios/**",
 				);
 			};
 			name = Release;
@@ -1333,6 +1342,7 @@
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
+					"$(SRCROOT)\..\node_modules\react-native-maps\lib\ios/**",
 				);
 			};
 			name = Debug;
@@ -1356,6 +1366,7 @@
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
+					"$(SRCROOT)\..\node_modules\react-native-maps\lib\ios/**",
 				);
 			};
 			name = Release;
@@ -1388,11 +1399,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
+					"$(SRCROOT)\..\node_modules\react-native-maps\lib\ios/**",
 				);
 			};
 			name = Debug;
@@ -1425,11 +1438,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
+					"$(SRCROOT)\..\node_modules\react-native-maps\lib\ios/**",
 				);
 			};
 			name = Release;
@@ -1461,11 +1476,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
+					"$(SRCROOT)\..\node_modules\react-native-maps\lib\ios/**",
 				);
 			};
 			name = Debug;
@@ -1497,11 +1514,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
+					"$(SRCROOT)\..\node_modules\react-native-maps\lib\ios/**",
 				);
 			};
 			name = Release;

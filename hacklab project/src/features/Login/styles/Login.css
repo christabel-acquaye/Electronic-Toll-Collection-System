@@ -1,0 +1,42 @@
+.boxed {
+  width: 100px;
+  height: 100px;
+  border: 2px solid red;
+  outline: rgb(161, 161, 161) solid 5px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20;
+}
+
+.body {
+  margin: 20;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.image {
+  width: 30%;
+  border-radius: 50%;
+}
+
+.textField {
+  border: none;
+  border-bottom: 2px solid rgb(78, 76, 76);
+  width: 100%;
+}
+
+.heading {
+  font-family: "Calibri";
+  color: #404886;
+}
+
+.heading_Next {
+  font-family: "Calibri";
+  color: #4d4f5c;
+}
+
+.button {
+  border-radius: 20px;
+  width: "80%";
+  height: "30";
+  color: #404886;
+}

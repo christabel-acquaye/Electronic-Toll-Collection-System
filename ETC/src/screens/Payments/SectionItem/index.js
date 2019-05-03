@@ -41,14 +41,10 @@ const SectionItem = ({ label, amount, expiry_date, onPress }) => (
 
 				<Text style={styles.paragraph}>{expiry_date}</Text>
 			</View>
-			<TouchableOpacity style={styles.button} onPress={this.onSubscribe}>
+			<TouchableOpacity style={styles.button} onPress={onPress}>
 				<Text style={{ color: "white" }}>Subscribe</Text>
 			</TouchableOpacity>
 		</View>
 	</Card>
 );
-
-onSubscribe = () => {
-	this.props.navigation.navigate("Detailed_Payment");
-};
 export default SectionItem;

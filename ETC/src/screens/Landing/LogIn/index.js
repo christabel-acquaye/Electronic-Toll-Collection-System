@@ -1,92 +1,84 @@
 import React, { Component } from "react";
 import {
-  View,
-  Text,
-  ImageBackground,
-  TextInput,
-  TouchableOpacity
+	View,
+	Text,
+	ImageBackground,
+	TextInput,
+	TouchableOpacity,
+	StatusBar,
+	ScrollView
 } from "react-native";
 import { NavigationInjectedProps } from "react-navigation";
 import { TextField } from "../../../components/TextField";
 import styles from "./styles";
-import SignUpForm from "../SignUpForm";
+
 import BackgroundImage from "../../../../assets/tollBackground.jpg";
 
 class Login extends React.Component<NavigationInjectedProps> {
-  state = {
-    phoneNumber: "",
-    password: ""
-  };
+	state = {
+		email: "",
+		password: ""
+	};
 
-  onChangeText = (text: string) => {
-    this.setState({
-      phoneNumber: text
-    });
-  };
+	handleEmailChange = (email: string) => {
+		this.setState({ email });
+	};
 
-  onChangePassword = (text: string) => {
-    this.setState({ password: text });
-  };
+	// handlePasswordChange = (password: string) => {
+	// 	this.setState({ password });
+	// };
 
-  render() {
-    const { password, phoneNumber } = this.state;
-    return (
-      <ImageBackground source={BackgroundImage} style={styles.backgroundStyle}>
-        <View style={styles.container}>
-          <View style={styles.LoginInputsContainer}>
-            <TextField
-              style={styles.textInputStyle}
-              placeholder="Phone number"
-              keyboardType="phone-pad"
-              onChangeText={this.onChangeText}
-              value={phoneNumber}
-              iconName="cellular"
-            />
-            <TextField
-              style={styles.textInputStyle}
-              placeholder="Password"
-              secureTextEntry
-              onChangeText={this.onChangePassword}
-              value={password}
-              iconName="lock"
-            />
-            <Text style={styles.linkStyle}>Forgot Password?</Text>
-          </View>
-          {/* <Button
-						text="Login"
-						onPress={this.onLogin}
-						size={Constants.app.theme.sizes.LARGE}
-					/> */}
-          {/* <Button
-						text="Sign Up"
-						onPress={this.onSignUp}
-						size={Constants.app.theme.sizes.LARGE}
-						color={Constants.app.theme.colors.button.INFO}
-          /> */}
+	onPasswordChange = (text: string) => {
+		this.setState({ password: text });
+	};
 
-          <TouchableOpacity style={styles.button} onPress={this.props.onLogIn}>
-            <Text style={styles.paragraph}>Log in</Text>
-          </TouchableOpacity>
-          <Text />
-          <Text />
-          <TouchableOpacity
-            style={styles.otherButtonStyle}
-            onPress={this.props.onSignUp}
-          >
-            <Text style={styles.paragraph}>Sign Up</Text>
-          </TouchableOpacity>
-        </View>
-      </ImageBackground>
-    );
-  }
+	render() {
+		const { email, password } = this.state;
+		return <React.Fragment>{this.renderLoginContent()}</React.Fragment>;
+	}
 
-  // onLogin = () => {
-  // 	this.props.navigation.navigate(Constants.app.routes.ERRANDS);
-  // };
+	renderLoginContent = () => {
+		return (
+			<ImageBackground source={BackgroundImage} style={styles.backgroundStyle}>
+				<StatusBar barStyle="light-content" backgroundColor="#404886" />
+				<ScrollView style={styles.scrollStyle}>
+					<View style={styles.viewStyle}>
+						<View style={styles.innerView}>
+							<TextField
+								style={styles.textInputStyle}
+								placeholder="Email"
+								onChangeText={this.props.handleEmailChange}
+								value={this.props.email}
+								iconName="mail"
+							/>
+							<TextField
+								style={styles.textInputStyle}
+								placeholder="Password"
+								secureTextEntry
+								onChangeText={this.props.onPasswordChange}
+								value={this.props.password}
+								iconName="lock"
+							/>
 
-  // onSignUp = () => {
-  // 	this.props.navigation.navigate(Constants.app.routes.AUTH);
-  // };
+							<Text style={styles.linkStyle}>Forgot Password?</Text>
+						</View>
+						<TouchableOpacity style={styles.button} onPress={this.props.onLogIn}>
+							<Text style={styles.extraTextStyle}>LOGIN</Text>
+						</TouchableOpacity>
+
+						<Text />
+						<TouchableOpacity style={styles.otherButton} onPress={this.props.onSignUp}>
+							<Text style={styles.extraTextStyle}> SIGN UP </Text>
+						</TouchableOpacity>
+					</View>
+				</ScrollView>
+			</ImageBackground>
+		);
+	};
+
+	onSignUp = () => {
+		this.props.navigation.navigate("MainStack");
+	};
 }
 
 export default Login;

@@ -121,3 +121,13 @@ class Settings extends Component {
 }
 
 export default Settings;
+
+// Card UID: 0B CF 6D 8B
+// Card SAK: 08
+// PICC type: MIFARE 1KB
+// Sector Block   0  1  2  3   4  5  6  7   8  9 10 11  12 13 14 15  AccessBits
+
+// Card UID: E0 F0 92 75
+// Card SAK: 08
+// PICC type: MIFARE 1KB
+// Sector Block   0  1  2  3   4  5  6  7   8  9 10 11  12 13 14 15  AccessBits

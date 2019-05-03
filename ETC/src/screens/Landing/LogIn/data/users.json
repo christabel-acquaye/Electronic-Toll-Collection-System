@@ -1,0 +1,21 @@
+{
+	"janedoe@someemail.com": {
+		"id": "",
+		"email": "janedoe@gmail.com",
+		"password": "password",
+		"firstName": "Vanessa",
+		"lastName": "Adjei",
+		"vehicleType": "Truck",
+		"vehicleNumber": "GR 1122-2012"
+	},
+
+	"johndoe@someemail.com": {
+		"id": "",
+		"password": "pass",
+		"firstName": "Wellington",
+		"lastName": "Chris",
+		"email": "johndoe@gmail.com",
+		"vehicleType": "Saloon",
+		"vehicleNumber": "ER 1122-2019"
+	}
+}
